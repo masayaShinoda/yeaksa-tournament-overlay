@@ -53,29 +53,29 @@ export default function Home() {
   
   return (
     <div className={styles.container}>
-          <div class="scoreInfoContainer">
-        <div class="scoreContainer">
-            <p class="teamName">
+          <div className="scoreInfoContainer">
+        <div className="scoreContainer">
+            <p className="teamName">
               {tournamentData && tournamentData[0].teamAName}              
             </p>
-            <p class="score">2</p>
+            <p className="score">2</p>
         </div>
-        <div class="scoreContainer">
-            <p class="teamName">
+        <div className="scoreContainer">
+            <p className="teamName">
               {tournamentData && tournamentData[0].teamBName}     
             </p>
-            <p class="score">3</p>
+            <p className="score">3</p>
         </div>
     </div>
-    <div class="upperDiv">
-        <div class="matchInfo">
-            <div class="teamsInfoContainer">
-                <div class="teamInfoContainer" id="teamAInfoContainer">
+    <div className="upperDiv">
+        <div className="matchInfo">
+            <div className="teamsInfoContainer">
+                <div className="teamInfoContainer" id="teamAInfoContainer">
                   {tournamentData && tournamentData[0].teamALogo &&
                     <img src={tournamentData[0].teamALogo.url} alt={tournamentData[0].teamALogo.alt} />
                   }
                 </div>
-                <div class="teamInfoContainer" id="teamBInfoContainer">
+                <div className="teamInfoContainer" id="teamBInfoContainer">
                   {tournamentData && tournamentData[0].teamBLogo &&
                     <img src={tournamentData[0].teamBLogo.url} alt={tournamentData[0].teamBLogo.alt} />
                   }
@@ -84,18 +84,18 @@ export default function Home() {
 
         </div>
         
-        <div class="tourLogoContainer">
+        <div className="tourLogoContainer">
             <img src="./images/yeaksa-summer-tour-orange-logo-01.svg" alt="YEAKSA SUMMER CUP" />
         </div>
-        <div class="tourInfo">
-            <span class="tourName">
+        <div className="tourInfo">
+            <span className="tourName">
                 YeakSa Summer Cup
                 <br />
-                <span class="tourGameName">
+                <span className="tourGameName">
                   {tournamentData && tournamentData[0].subtitle}
                 </span>
             </span>
-            <div class="casterInfo">
+            <div className="casterInfo">
                 <img src="./images/mic-svg.svg" alt="." />
                 <p>
                   {tournamentData && tournamentData[0].casters}
