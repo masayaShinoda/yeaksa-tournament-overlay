@@ -63,13 +63,17 @@ export default function Home() {
             <p className="teamName">
               {tournamentData && tournamentData[0].teamAName}              
             </p>
-            <p className="score">2</p>
+            <p className="score">
+             {tournamentData && tournamentData[0].teamAScore}
+            </p>
         </div>
         <div className="scoreContainer">
             <p className="teamName">
               {tournamentData && tournamentData[0].teamBName}     
             </p>
-            <p className="score">3</p>
+            <p className="score">
+             {tournamentData && tournamentData[0].teamBScore}
+            </p>
         </div>
     </div>
     <div className="upperDiv">
