@@ -35,6 +35,10 @@ export default function Home() {
                       alt
                       url
                     }
+                    tourLogo {
+                      alt
+                      url
+                    }
                   }
                 }`
             }),
@@ -73,12 +77,20 @@ export default function Home() {
             <div className="teamsInfoContainer">
                 <div className="teamInfoContainer" id="teamAInfoContainer">
                   {tournamentData && tournamentData[0].teamALogo &&
-                    <Image src={tournamentData[0].teamALogo.url} alt={tournamentData[0].teamALogo.alt} />
+                    <img 
+                      src={tournamentData[0].teamALogo.url} 
+                      alt={tournamentData[0].teamALogo.alt} 
+                      // layout="fill"
+                    />
                   }
                 </div>
                 <div className="teamInfoContainer" id="teamBInfoContainer">
                   {tournamentData && tournamentData[0].teamBLogo &&
-                    <Image src={tournamentData[0].teamBLogo.url} alt={tournamentData[0].teamBLogo.alt} />
+                    <img 
+                      src={tournamentData[0].teamBLogo.url} 
+                      alt={tournamentData[0].teamBLogo.alt}
+                      // layout="fill" 
+                    />
                   }
                 </div>
             </div>
@@ -86,7 +98,15 @@ export default function Home() {
         </div>
         
         <div className="tourLogoContainer">
-            <Image src="./images/yeaksa-summer-tour-orange-logo-01.svg" alt="YEAKSA SUMMER CUP" />
+            {tournamentData && 
+              (
+                <img 
+                  src={tournamentData[0].tourLogo["url"]}
+                  alt={tournamentData[0].tourLogo["alt"]}
+                  // layout="fill"
+                />
+              )
+            }
         </div>
         <div className="tourInfo">
             <span className="tourName">
@@ -97,7 +117,7 @@ export default function Home() {
                 </span>
             </span>
             <div className="casterInfo">
-                <Image src="./images/mic-svg.svg" alt="." />
+                <Image src="/images/mic-svg.svg" width="20" height="20" alt="." />
                 <p>
                   {tournamentData && tournamentData[0].casters}
                 </p>
