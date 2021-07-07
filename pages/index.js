@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -72,12 +73,12 @@ export default function Home() {
             <div className="teamsInfoContainer">
                 <div className="teamInfoContainer" id="teamAInfoContainer">
                   {tournamentData && tournamentData[0].teamALogo &&
-                    <img src={tournamentData[0].teamALogo.url} alt={tournamentData[0].teamALogo.alt} />
+                    <Image src={tournamentData[0].teamALogo.url} alt={tournamentData[0].teamALogo.alt} />
                   }
                 </div>
                 <div className="teamInfoContainer" id="teamBInfoContainer">
                   {tournamentData && tournamentData[0].teamBLogo &&
-                    <img src={tournamentData[0].teamBLogo.url} alt={tournamentData[0].teamBLogo.alt} />
+                    <Image src={tournamentData[0].teamBLogo.url} alt={tournamentData[0].teamBLogo.alt} />
                   }
                 </div>
             </div>
@@ -85,7 +86,7 @@ export default function Home() {
         </div>
         
         <div className="tourLogoContainer">
-            <img src="./images/yeaksa-summer-tour-orange-logo-01.svg" alt="YEAKSA SUMMER CUP" />
+            <Image src="./images/yeaksa-summer-tour-orange-logo-01.svg" alt="YEAKSA SUMMER CUP" />
         </div>
         <div className="tourInfo">
             <span className="tourName">
@@ -96,7 +97,7 @@ export default function Home() {
                 </span>
             </span>
             <div className="casterInfo">
-                <img src="./images/mic-svg.svg" alt="." />
+                <Image src="./images/mic-svg.svg" alt="." />
                 <p>
                   {tournamentData && tournamentData[0].casters}
                 </p>
