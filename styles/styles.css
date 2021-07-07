@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+.scoreInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50px;
+  width: 65%;
+  margin: 0 17.5vw;
+  background: #ececec;
+}
+
+.scoreInfoContainer .scoreContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 21px;
+  margin: 0 100px;
+  max-width: 32.5%;
+}
+
+.scoreInfoContainer .scoreContainer .score, .scoreInfoContainer .scoreContainer .teamName {
+  padding: 10px 25px;
+}
+
+.scoreInfoContainer .scoreContainer .teamName {
+  width: 100%;
+  max-width: 100%;
+}
+
+.scoreInfoContainer .scoreContainer .score {
+  background: #212121;
+  color: #fcfcfc;
+}
+
+.scoreInfoContainer .scoreContainer:nth-of-type(odd) {
+  margin-right: 30px;
+}
+
+.scoreInfoContainer .scoreContainer:nth-of-type(even) {
+  margin-left: 30px;
+  direction: rtl;
+}
+
+.upperDiv {
+  width: 100%;
+  height: 100px;
+  max-height: 100px;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.upperDiv .matchInfo {
+  width: 65%;
+  height: 100px;
+  max-height: 100;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.upperDiv .matchInfo .teamsInfoContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.upperDiv .matchInfo .teamsInfoContainer .teamInfoContainer {
+  width: 100px;
+  height: 100px;
+  color: #fcfcfc;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #212121;
+  background-position: center;
+  background-size: contain;
+  border: 4px solid #353535;
+  padding: 10px;
+}
+
+.upperDiv .matchInfo .teamsInfoContainer .teamInfoContainer img {
+  width: 90%;
+  max-width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.upperDiv .tourLogoContainer {
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+}
+
+.upperDiv .tourLogoContainer img {
+  width: 110px;
+  max-width: 110px;
+}
+
+.upperDiv .tourInfo {
+  right: 0;
+  top: 0;
+  position: fixed;
+  background: rgba(0, 0, 255, 0.25);
+  height: 100px;
+  max-height: 100px;
+  width: 17.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fcfcfc;
+}
+
+.upperDiv .tourInfo .tourName {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  background: #F7931E;
+  padding: 10px 20px;
+}
+
+.upperDiv .tourInfo .tourName .tourGameName {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.upperDiv .tourInfo .casterInfo {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  padding: 5px 20px;
+  background: #ececec;
+  color: #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upperDiv .tourInfo .casterInfo img {
+  max-height: 20px;
+  height: 20px;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.upperDiv .tourInfo .casterInfo p {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+/*# sourceMappingURL=styles.css.map */
