@@ -77,19 +77,21 @@ export default function Home() {
             <div className="teamsInfoContainer">
                 <div className="teamInfoContainer" id="teamAInfoContainer">
                   {tournamentData && tournamentData[0].teamALogo &&
-                    <img 
+                    <Image 
                       src={tournamentData[0].teamALogo.url} 
                       alt={tournamentData[0].teamALogo.alt} 
-                      // layout="fill"
+                      width="100"
+                      height="100"
                     />
                   }
                 </div>
                 <div className="teamInfoContainer" id="teamBInfoContainer">
                   {tournamentData && tournamentData[0].teamBLogo &&
-                    <img 
+                    <Image 
                       src={tournamentData[0].teamBLogo.url} 
                       alt={tournamentData[0].teamBLogo.alt}
-                      // layout="fill" 
+                      width="100"
+                      height="100"
                     />
                   }
                 </div>
@@ -100,10 +102,11 @@ export default function Home() {
         <div className="tourLogoContainer">
             {tournamentData && 
               (
-                <img 
+                <Image 
                   src={tournamentData[0].tourLogo["url"]}
                   alt={tournamentData[0].tourLogo["alt"]}
-                  // layout="fill"
+                  width="110"
+                  height="110"
                 />
               )
             }
